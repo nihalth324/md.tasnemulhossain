@@ -84,9 +84,15 @@ if (cursorMotion.matches) {
     targetX = event.clientX;
     targetY = event.clientY;
     cursorHalo.classList.add("is-visible");
+    cursorHalo.style.visibility = "visible";
+    cursorHalo.style.scale = "1";
     if (!animationFrame) animationFrame = requestAnimationFrame(followPointer);
   }, { passive: true });
-  window.addEventListener("pointerleave", () => cursorHalo.classList.remove("is-visible"));
+  window.addEventListener("pointerleave", () => {
+    cursorHalo.classList.remove("is-visible");
+    cursorHalo.style.visibility = "hidden";
+    cursorHalo.style.scale = ".78";
+  });
 }
 
 document.querySelector("#current-year").textContent = new Date().getFullYear();
