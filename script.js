@@ -60,4 +60,33 @@ if ("IntersectionObserver" in window) {
   }), { rootMargin: "-25% 0px -65% 0px" });
   sections.forEach((section) => sectionObserver.observe(section));
 }
+const cursorHalo = document.querySelector(".cursor-halo");
+const cursorMotion = window.matchMedia("(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)");
+
+if (cursorMotion.matches) {
+  let targetX = -100;
+  let targetY = -100;
+  let currentX = targetX;
+  let currentY = targetY;
+  let animationFrame = 0;
+
+  function followPointer() {
+    currentX += (targetX - currentX) * 0.18;
+    currentY += (targetY - currentY) * 0.18;
+    cursorHalo.style.setProperty("--cursor-x", `${currentX}px`);
+    cursorHalo.style.setProperty("--cursor-y", `${currentY}px`);
+    if (Math.abs(targetX - currentX) > 0.5 || Math.abs(targetY - currentY) > 0.5) {
+      animationFrame = requestAnimationFrame(followPointer);
+    } else animationFrame = 0;
+  }
+
+  window.addEventListener("pointermove", (event) => {
+    targetX = event.clientX;
+    targetY = event.clientY;
+    cursorHalo.classList.add("is-visible");
+    if (!animationFrame) animationFrame = requestAnimationFrame(followPointer);
+  }, { passive: true });
+  window.addEventListener("pointerleave", () => cursorHalo.classList.remove("is-visible"));
+}
+
 document.querySelector("#current-year").textContent = new Date().getFullYear();
