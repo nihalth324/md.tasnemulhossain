@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f6">
+  <meta name="description" content="A photography album by Md Tasnemul Hossain Chowdhury, featuring Bangladesh landscapes, city scenes, and everyday moments.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Photography Album | Md Tasnemul Hossain Chowdhury">
+  <meta property="og:description" content="A personal collection of places, light, and little details from Bangladesh.">
+  <title>Photography Album | Md Tasnemul Hossain Chowdhury</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="album.css">
+  <script src="script.js" defer></script>
+  <script src="album.js" defer></script>
+</head>
+<body class="album-page">
+  <a class="skip-link" href="#gallery">Skip to gallery</a>
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="wordmark" href="index.html" aria-label="Md Tasnemul Hossain Chowdhury, home"><span class="wordmark__mark" aria-hidden="true">MT</span><span>Md Tasnemul Hossain Chowdhury</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="album-navigation"><span aria-hidden="true">☰</span> Menu</button>
+      <nav class="site-nav" id="album-navigation" aria-label="Main navigation">
+        <a href="index.html#about">About</a><a href="index.html#projects">Projects</a><a href="album.html" aria-current="page">Photography</a><a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="album-hero">
+      <img class="album-hero__image" src="images/photography/dhaka-bridge-sunset.jpg" alt="Dhaka's pedestrian bridge and skyline at sunset" fetchpriority="high">
+      <div class="album-hero__shade" aria-hidden="true"></div>
+      <div class="wrap album-hero__content reveal">
+        <a class="album-back" href="index.html"><span aria-hidden="true">←</span> Back to portfolio</a>
+        <p class="eyebrow">Personal collection / Bangladesh</p>
+        <h1>Photography,<br><em>in frames.</em></h1>
+        <div class="album-hero__foot"><p>Places, light, texture, and moments I want to remember.</p><span>20 photographs <i aria-hidden="true"></i> 2026</span></div>
+      </div>
+    </section>
+    <section class="album-gallery wrap" id="gallery" aria-labelledby="gallery-title">
+      <div class="album-gallery__heading"><div><p class="eyebrow">Visual journal / 01—20</p><h2 id="gallery-title">A view from here.</h2></div><p>Bangladesh, seen slowly.</p></div>
+      <div class="album-filters" role="group" aria-label="Filter photographs">
+        <button class="album-filter is-active" type="button" data-album-filter="all" aria-pressed="true">All photos <span>20</span></button>
+        <button class="album-filter" type="button" data-album-filter="city" aria-pressed="false">City <span>7</span></button>
+        <button class="album-filter" type="button" data-album-filter="nature" aria-pressed="false">Nature <span>3</span></button>
+        <button class="album-filter" type="button" data-album-filter="travel" aria-pressed="false">Travel <span>10</span></button>
+      </div>
+      <div class="album-grid">
+        <figure class="album-photo album-photo--tall reveal" data-category="city"><button class="album-photo__open" type="button" data-index="0" aria-label="View City under the old trees"><img src="images/photography/city-under-trees.jpg" alt="Dhaka street beneath a canopy of old trees" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>City under the old trees</span><span>01 / Street</span></figcaption></figure>
+        <figure class="album-photo reveal" data-category="travel"><button class="album-photo__open" type="button" data-index="1" aria-label="View Hilltop retreat"><img src="images/photography/hilltop-retreat.jpg" alt="A hilltop retreat above misty green hills" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Hilltop retreat</span><span>02 / Travel</span></figcaption></figure>
+        <figure class="album-photo reveal" data-category="travel"><button class="album-photo__open" type="button" data-index="2" aria-label="View The long road home"><img src="images/photography/forest-road.jpg" alt="A quiet road disappearing beneath forest trees" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>The long road home</span><span>03 / Travel</span></figcaption></figure>
+        <figure class="album-photo album-photo--tall reveal" data-category="travel"><button class="album-photo__open" type="button" data-index="3" aria-label="View Green country road"><img src="images/photography/hill-country-road.jpg" alt="Winding road through a green hillside landscape" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Green country road</span><span>04 / Travel</span></figcaption></figure>
+        <figure class="album-photo reveal" data-category="travel"><button class="album-photo__open" type="button" data-index="4" aria-label="View Last light on the water"><img src="images/photography/sunset-fishing-boat.jpg" alt="Fishing boat silhouetted against a gold sunset" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Last light on the water</span><span>05 / Travel</span></figcaption></figure>
+        <figure class="album-photo reveal" data-category="city"><button class="album-photo__open" type="button" data-index="5" aria-label="View Rain in the old quarter"><img src="images/photography/rainy-old-town.jpg" alt="Rainy old-town lane in black and white" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Rain in the old quarter</span><span>06 / City</span></figcaption></figure>
+        <figure class="album-photo album-photo--wide reveal" data-category="city"><button class="album-photo__open" type="button" data-index="6" aria-label="View Evening kitchen"><img src="images/photography/street-food-evening.jpg" alt="Street cook working in warm evening light" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Evening kitchen</span><span>07 / City</span></figcaption></figure>
+        <figure class="album-photo reveal" data-category="travel"><button class="album-photo__open" type="button" data-index="7" aria-label="View Sunset crossing"><img src="images/photography/coastal-boat.jpg" alt="Boat crossing a calm sea at sunset" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Sunset crossing</span><span>08 / Travel</span></figcaption></figure>
+        <figure class="album-photo reveal" data-category="city"><button class="album-photo__open" type="button" data-index="8" aria-label="View Flowers on the street"><img src="images/photography/flower-lined-street.jpg" alt="Colorful flowers along a busy city street" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Flowers on the street</span><span>09 / City</span></figcaption></figure>
+        <figure class="album-photo album-photo--tall reveal" data-category="nature"><button class="album-photo__open" type="button" data-index="9" aria-label="View The tree in the water"><img src="images/photography/tree-in-the-floodplain.jpg" alt="A lone tree standing in a wide floodplain" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>The tree in the water</span><span>10 / Nature</span></figcaption></figure>
+        <figure class="album-photo reveal" data-category="nature"><button class="album-photo__open" type="button" data-index="10" aria-label="View Into the mangroves"><img src="images/photography/mangrove-journey.jpg" alt="Small boat passing through green mangrove trees" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Into the mangroves</span><span>11 / Nature</span></figcaption></figure>
+        <figure class="album-photo reveal" data-category="nature"><button class="album-photo__open" type="button" data-index="11" aria-label="View Wildflower garden"><img src="images/photography/wildflower-garden.jpg" alt="Yellow wildflowers in front of a quiet garden cottage" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Wildflower garden</span><span>12 / Nature</span></figcaption></figure>
+        <figure class="album-photo reveal" data-category="city"><button class="album-photo__open" type="button" data-index="12" aria-label="View Flowers beneath the skyline"><img src="images/photography/gulshan-flower-walk.jpg" alt="Flower-covered walkway beside a Dhaka office building" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Flowers beneath the skyline</span><span>13 / City</span></figcaption></figure>
+        <figure class="album-photo album-photo--wide reveal" data-category="travel"><button class="album-photo__open" type="button" data-index="13" aria-label="View Bridge at golden hour"><img src="images/photography/dhaka-bridge-sunset.jpg" alt="Pedestrian bridge and Dhaka skyline at golden hour" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Bridge at golden hour</span><span>14 / Travel</span></figcaption></figure>
+        <figure class="album-photo reveal" data-category="city"><button class="album-photo__open" type="button" data-index="14" aria-label="View Rooftop afterglow"><img src="images/photography/rooftop-afterglow.jpg" alt="Warm afterglow over Dhaka rooftops" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Rooftop afterglow</span><span>15 / City</span></figcaption></figure>
+        <figure class="album-photo reveal" data-category="travel"><button class="album-photo__open" type="button" data-index="15" aria-label="View City bridge at evening"><img src="images/photography/city-bridge-evening.jpg" alt="Evening sky over a Dhaka pedestrian bridge" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>City bridge at evening</span><span>16 / Travel</span></figcaption></figure>
+        <figure class="album-photo reveal" data-category="travel"><button class="album-photo__open" type="button" data-index="16" aria-label="View Aircraft over the city"><img src="images/photography/aircraft-over-dhaka.jpg" alt="Airplane crossing a dramatic sunset above Dhaka rooftops" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Aircraft over the city</span><span>17 / Travel</span></figcaption></figure>
+        <figure class="album-photo reveal" data-category="travel"><button class="album-photo__open" type="button" data-index="17" aria-label="View Bridge before rain"><img src="images/photography/bridge-before-rain.jpg" alt="Dhaka pedestrian bridge beneath a rain-heavy sky" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Bridge before rain</span><span>18 / Travel</span></figcaption></figure>
+        <figure class="album-photo album-photo--wide reveal" data-category="travel"><button class="album-photo__open" type="button" data-index="18" aria-label="View Sundown over Dhaka"><img src="images/photography/bridge-at-sundown.jpg" alt="Golden sunset behind a Dhaka bridge" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Sundown over Dhaka</span><span>19 / Travel</span></figcaption></figure>
+        <figure class="album-photo reveal" data-category="city"><button class="album-photo__open" type="button" data-index="19" aria-label="View AIUB campus courtyard"><img src="images/photography/aiub-campus-courtyard.jpg" alt="Sunlit courtyard and curved campus building at AIUB" loading="lazy"><span class="album-photo__zoom" aria-hidden="true">↗</span></button><figcaption><span>Campus courtyard</span><span>20 / City</span></figcaption></figure>
+      </div>
+    </section>
+  </main>
+  <footer class="album-footer"><div class="wrap"><a href="index.html">← Back to portfolio</a><span>© <span id="current-year">2026</span> Md Tasnemul Hossain Chowdhury</span></div></footer>
+  <dialog class="photo-viewer" aria-label="Photo viewer"><button class="photo-viewer__close" type="button" aria-label="Close photo viewer">×</button><button class="photo-viewer__previous" type="button" aria-label="Previous photo">‹</button><figure><img src="" alt=""><figcaption></figcaption></figure><button class="photo-viewer__next" type="button" aria-label="Next photo">›</button><p class="photo-viewer__counter" aria-live="polite"></p></dialog>
+  <span class="cursor-halo" aria-hidden="true"></span>
+</body>
+</html>
